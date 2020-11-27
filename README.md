@@ -36,9 +36,9 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
+- Have a working interactive React App
+- 8, Fully styled components 
+- Have a database with 3 seperate tables
 - _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
 - _etc._
 
