@@ -20,7 +20,9 @@
 
 ## Overview
 
-_**Tales from The Roasted Lizard** The wind howls and the drains swell with the heavy rainfall. You pull your collar up over your face as the cold bites your nose. Pushing your way through an especially crowded market district, your eyes level on your destination. A nondescript wooden building, two stories in height, flanked by the more modern brick and mortar structures Brickhold is now famed for. A steady stream of patrons flow in and out of the large wooden doors under a bright green and yellow sign. "THE ROASTED LIZARD INN: Drink and Quests inquire within" You tighten your grip on your sword and mutter a protection ward as you push through the rainsoaked flow of patrons into the smoke filled tavern._
+_**Tales from The Roasted Lizard** 
+
+The wind howls and the drains swell with the heavy rainfall. You pull your collar up over your face as the cold bites your nose. Pushing your way through an especially crowded market district, your eyes level on your destination. A nondescript wooden building, two stories in height, flanked by the more modern brick and mortar structures Brickhold is now famed for. A steady stream of patrons flow in and out of the large wooden doors under a bright green and yellow sign. "THE ROASTED LIZARD INN: Drink and Quests inquire within" You tighten your grip on your sword and mutter a protection ward as you push through the rainsoaked flow of patrons into the smoke filled tavern._
 
 
 <br>
