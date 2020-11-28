@@ -24,22 +24,18 @@
 
 *The wind howls and the drains swell with the heavy rainfall. You pull your collar up over your face as the cold bites your nose. Pushing your way through an especially crowded market district, your eyes level on your destination. A steady stream of patrons flow in and out of the large wooden doors under a bright green and yellow sign. "THE ROASTED LIZARD INN: Drink and Quests inquire within" You tighten your grip on your sword and mutter a protection ward as you push through the rainsoaked flow of patrons into the smoke filled tavern.*
 
-Ever need a quest? Have an interesting plot hook, story premise, or a fun campaign idea? Let the notice board at the Lizard satisfy your hunger for adventure (and food)! The idea is simple, post a quest idea or story premise and have your fellow tavern patrons (or users) vote and comment on which ones they like! Maybe you can collaborate together to fine-tune some interesting story ideas.
+Ever need a quest? Have an interesting plot hook, story premise, or a fun campaign idea for your next DND game? Let the notice board at the Lizard satisfy your hunger for adventure (and food)! The idea is simple, post a quest idea or story premise and have your fellow tavern patrons (or users) comment on which ones spark their imagination! Maybe you can collaborate together to fine-tune some interesting story ideas.
 
 <br>
 
 ## MVP
-  Create a fully functioning, styled blog posting app, complete with comments and image posting.
-
-<br>
-
-### Goals
 
 - Have a working interactive React App
 - 8, Fully styled components 
-- Have a database with 3 seperate tables
-- 
-- _etc._
+- Have a database with 3 seperate tables (posts, users and comments)
+- Implement Patrons (users) to allow posting and commenting on posts
+- Link backend to database (postgresql)
+- Demonstrate Full CRUD capabilities 
 
 <br>
 
@@ -53,7 +49,7 @@ Ever need a quest? Have an interesting plot hook, story premise, or a fun campai
 |   React Router   | Routes/Links/withRouter |
 | Axios | API |
 |     Rails      | Backend |
-|  CORS  | Handles outside requests|
+|  Postgresql  | Connecting Database |
 
 <br>
 
@@ -61,35 +57,65 @@ Ever need a quest? Have an interesting plot hook, story premise, or a fun campai
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
-
 https://www.figma.com/file/JvQD3Nf5NfkiCpUpcZhOtC/Tales-from-the-Roasted-Lizard?node-id=0%3A1
 
 #### Component Tree
 
 > Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
 
-#### Component Hierarchy
+[Component tree](url)
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
+#### Component Hierarchy
 
 ``` structure
 
 src
 |__ assets/
-      |__ images
       |__ textures
+      |__ images
 |__ components/
       |__ Header.jsx
+      |__ Header.css
+      |__ Footer.jsx
+      |__ Footer.css
+|__ containers/
+      |__ MainContainer.jsx
+|__ layouts/
+      |__ Layout.jsx
+      |__ Layout.css
+|__ screens/
+      |__ Intro.jsx
+      |__ Intro.css
+      |__ Login.jsx
+      |__ Login.css
+      |__ Register.jsx
+      |__ Register.css
+      |__ Posts.jsx
+      |__ Posts.css
+      |__ Post.jsx
+      |__ Post.css
+      |__ EditPost.jsx
+      |__ EditPost.css
+      |__ CreatePost.jsx
+      |__ CreatePost.css
+      |__ Comment.jsx
+      |__ Comment.css
 |__ services/
+      |__ apiConfig.js
+      |__ posts.js
+      |__ users.js
+|__ App.js
+|__ App.css
+|__ index.js
+|__ index.css
+|__ reportWebVitals.js
+|__ .gitignore
+|__ package-lock.json
+|__ package.json
+|__ README.md
 
 ```
 
-#### Component Tree
-
-> Use this section to include a link to your component tree.
-
-[Component tree](url)
 
 #### Time Estimates
 
@@ -100,8 +126,6 @@ src
 | Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
 | Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
-
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
 <br>
 
