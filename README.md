@@ -29,8 +29,7 @@ Ever need a quest? Have an interesting plot hook, story premise, or a fun campai
 <br>
 
 ## MVP
-
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+  Create a fully functioning, styled blog posting app, complete with comments and image posting.
 
 <br>
 
@@ -39,7 +38,7 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 - Have a working interactive React App
 - 8, Fully styled components 
 - Have a database with 3 seperate tables
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
+- 
 - _etc._
 
 <br>
@@ -78,10 +77,8 @@ https://www.figma.com/file/JvQD3Nf5NfkiCpUpcZhOtC/Tales-from-the-Roasted-Lizard?
 
 src
 |__ assets/
-      |__ fonts
-      |__ graphics
       |__ images
-      |__ mockups
+      |__ textures
 |__ components/
       |__ Header.jsx
 |__ services/
