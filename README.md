@@ -61,9 +61,7 @@ https://www.figma.com/file/JvQD3Nf5NfkiCpUpcZhOtC/Tales-from-the-Roasted-Lizard?
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
-
-[Component tree](url)
+https://whimsical.com/tales-from-the-roasted-lizard-ADP6L71gTYxJ1EywiVkjd
 
 #### Component Hierarchy
 
@@ -80,6 +78,7 @@ src
       |__ Footer.css
 |__ containers/
       |__ MainContainer.jsx
+      |__ MainContainer.css
 |__ layouts/
       |__ Layout.jsx
       |__ Layout.css
@@ -92,8 +91,8 @@ src
       |__ Register.css
       |__ Posts.jsx
       |__ Posts.css
-      |__ Post.jsx
-      |__ Post.css
+      |__ PostDetails.jsx
+      |__ PostDetails.css
       |__ EditPost.jsx
       |__ EditPost.css
       |__ CreatePost.jsx
