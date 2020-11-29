@@ -153,6 +153,7 @@ https://app.diagrams.net/#G1wkrSFbzqiZcz7-2maaHpdKjUKAPGOcbF
 ## Post-MVP
 
 -Favoriting posts
+<br>
 -Adding favorited posts/comments to user accounts pages.
 
 ***
