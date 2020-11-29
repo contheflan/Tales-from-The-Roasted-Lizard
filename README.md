@@ -145,7 +145,7 @@ src
 
 https://app.diagrams.net/#G1wkrSFbzqiZcz7-2maaHpdKjUKAPGOcbF
 
-[ERD](https://i.imgur.com/8wJjRhg.png)
+![ERD](https://i.imgur.com/8wJjRhg.png)
 <br>
 
 ***
