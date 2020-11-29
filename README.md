@@ -122,9 +122,20 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Fill out Migration Tables    |    H   |     3 hrs      |     TBD     |    TBD   |
+| Create Seed Data |    H     |     3 hrs      |     TBD    |     TBD     |
+| Create Controller Routes |    H     |     3 hrs      |     TBD    |     TBD     |
+| Implement User Authentication Routes |    H     |     1 hr     |     TBD    |     TBD     |
+| Migration Debugging |    M   |     6 hrs      |     TBD    |     TBD     |
+| Troubleshooting Migration data |    H     |     1 hr    |     TBD    |     TBD     |
+| Connecting Backend with Frontend |    H     |     2 hrs      |     TBD    |     TBD     |
+| Creating React App |    H     |     1 hr    |     TBD    |     TBD     |
+| Filling out React Boilerplate |    H     |     3 hrs      |     TBD    |     TBD     |
+| Render Website Front-end Components |    H     |     7 hrs      |     TBD    |     TBD     |
+| Styling Components w/ CSS |    H     |     10 hrs      |     TBD    |     TBD     |
+| Media Queries for Phone/Tablet|    L   |     3 hrs      |     TBD    |     TBD     |
+| Deployment |    H     |     1 hr   |     TBD    |     TBD     |
+| TOTAL               |          |     44 hrs      |     TBD     |     TBD     |
 
 <br>
 
