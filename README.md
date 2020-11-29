@@ -143,9 +143,9 @@ src
 
 #### ERD Model
 
-https://app.diagrams.net/#G1wkrSFbzqiZcz7-2maaHpdKjUKAPGOcbF
+https://drive.google.com/file/d/1wkrSFbzqiZcz7-2maaHpdKjUKAPGOcbF/view?usp=sharing
 
-![ERD](https://i.imgur.com/8wJjRhg.png)
+![ERD](https://i.imgur.com/f9ej5z8.png)
 <br>
 
 ***
