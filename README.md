@@ -140,7 +140,8 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+-Favoriting posts
+-Adding favorited posts/comments to user accounts pages.
 
 ***
 
