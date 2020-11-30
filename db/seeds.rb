@@ -13,19 +13,19 @@ User.destroy_all
 username: 'admin', 
 img_url:'https://cdn.akc.org/content/hero/corgi_header_image.jpg', 
 email: 'admin@email.com', 
-password_digest: '123456')
+password: '123456')
 
 @user1 = User.create!(
 username: 'mageslay2020',
 img_url: 'https://images.uesp.net/thumb/0/06/ON-npc-Firstmage_Arnure.jpg/600px-ON-npc-Firstmage_Arnure.jpg',
 email: 'mageslay@email.com',
-password_digest: '123456')
+password: '123456')
 
 @user2 = User.create!(
 username: 'urbul',
 img_url: 'https://images.uesp.net/thumb/f/f7/OB-npc-Urbul_gro-Orkulg.jpg/600px-OB-npc-Urbul_gro-Orkulg.jpg',
 email: 'urbul@email.com',
-password_digest: '123456')
+password: '123456')
 
 puts "#{User.count} patrons er, users created!"
 
