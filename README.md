@@ -2,7 +2,6 @@
 
 - [Overview](#overview)
 - [MVP](#mvp)
-  - [Goals](#goals)
   - [Libraries and Dependencies](#libraries-and-dependencies)
   - [Client (Front End)](#client-front-end)
     - [Wireframes](#wireframes)
