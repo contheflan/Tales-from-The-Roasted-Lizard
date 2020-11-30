@@ -41,8 +41,6 @@ Ever need a quest? Have an interesting plot hook, story premise, or a fun campai
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | Front end Framework |
@@ -118,14 +116,13 @@ src
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
 | Fill out Migration Tables    |    H   |     3 hrs      |     TBD     |    TBD   |
 | Create Seed Data |    H     |     3 hrs      |     TBD    |     TBD     |
 | Create Controller Routes |    H     |     3 hrs      |     TBD    |     TBD     |
-| Implement User Authentication Routes |    H     |     1 hr     |     TBD    |     TBD     |
+| Implement User Authentication Routes |    H     |     3 hr     |     TBD    |     TBD     |
 | Migration Debugging |    M   |     6 hrs      |     TBD    |     TBD     |
 | Troubleshooting Migration data |    H     |     1 hr    |     TBD    |     TBD     |
 | Connecting Backend with Frontend |    H     |     2 hrs      |     TBD    |     TBD     |
@@ -135,7 +132,7 @@ src
 | Styling Components w/ CSS |    H     |     10 hrs      |     TBD    |     TBD     |
 | Media Queries for Phone/Tablet|    L   |     3 hrs      |     TBD    |     TBD     |
 | Deployment |    H     |     1 hr   |     TBD    |     TBD     |
-| TOTAL               |          |     44 hrs      |     TBD     |     TBD     |
+| TOTAL               |          |     46 hrs      |     TBD     |     TBD     |
 
 <br>
 
