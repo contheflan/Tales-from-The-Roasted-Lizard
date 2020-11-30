@@ -152,6 +152,7 @@ https://drive.google.com/file/d/1wkrSFbzqiZcz7-2maaHpdKjUKAPGOcbF/view?usp=shari
 -Favoriting posts
 <br>
 -Adding favorited posts/comments to user accounts pages.
+-Adding an additional table, DM tools, which streamlines importing dnd dm specific tools (hazards, monster blocks etc.)
 
 ***
 
