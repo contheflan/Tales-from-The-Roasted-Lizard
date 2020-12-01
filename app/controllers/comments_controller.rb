@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :update, :destroy]
-
+  before_action :authorize_request, only: [:create, :update, :destroy]
   # GET /comments
   def index
     @comments = Comment.all
@@ -14,14 +14,24 @@ class CommentsController < ApplicationController
   end
 
   # POST /comments
-  def create
-    @comment = Comment.new(comment_params)
+  # def create
+  #   @comment = Comment.new(comment_params)
 
+  #   if @comment.save
+  #     render json: @comment, status: :created
+  #   else
+  #     render json: @comment.errors, status: :unprocessable_entity
+  #   end
+  # end
+
+  def create
+    @posting = Posting.find(params[:posting_id])
+    @comment = @posting.comments.create(comment_params)
     if @comment.save
-      render json: @comment, status: :created
-    else
-      render json: @comment.errors, status: :unprocessable_entity
-    end
+       render json: @comment, status: :created
+        else
+        render json: @comment.errors, status: :unprocessable_entity
+    end  
   end
 
   # PATCH/PUT /comments/1
@@ -46,6 +56,6 @@ class CommentsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def comment_params
-      params.require(:comment).permit(:user_id, :content, :img_url, :posting_id)
+      params.require(:comment).permit(:content, :img_url).merge(user_id: @current_user.id)
     end
 end

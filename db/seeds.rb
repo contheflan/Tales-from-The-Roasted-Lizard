@@ -27,6 +27,8 @@ img_url: 'https://images.uesp.net/thumb/f/f7/OB-npc-Urbul_gro-Orkulg.jpg/600px-O
 email: 'urbul@email.com',
 password: '123456')
 
+
+
 puts "#{User.count} patrons er, users created!"
 
 @posting1 = Posting.create!(
