@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import ham from ".././assets/images/ham.gif";
+import ham from "../../assets/images/ham.gif";
 
 export default function Login(props) {
   const [formData, setFormData] = useState({

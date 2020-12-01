@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, useHistory } from 'react-router-dom';
 import "./App.css";
-import Intro from "./screens/Intro";
-import Login from "./screens/Login";
-import Register from "./screens/Register";
-import Postings from "./screens/Postings";
+import Intro from "./screens/Intro/Intro";
+import Login from "./screens/Login/Login";
+import Register from "./screens/Register/Register";
+import Postings from "./screens/Postings/Postings";
 
 import { useState, useEffect } from 'react';
 

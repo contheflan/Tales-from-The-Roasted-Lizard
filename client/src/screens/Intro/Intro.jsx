@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import rainytown from ".././assets/images/rainytown.gif";
+import rainytown from "../../assets/images/rainytown.gif";
 function Intro() {
   return (
     <div className="intro">

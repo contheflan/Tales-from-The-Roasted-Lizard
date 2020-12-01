@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 export default function Postings(props) {
   return (
     <div>
-      <h3>Postings!</h3>
+      <h2>Here Thar Be Postings</h2>
       {
         props.postings.map(posting => (
-          <React.Fragment key={posting.id}>
-            <Link to={`/postings/${posting.id}`}><p>{posting.name}</p></Link>
+          <div key={posting.id}>
+            <Link to={`/postings/${posting.id}`}><p>{posting.title}</p></Link>
             {
               posting.user_id === props.currentUser?.id &&
               <>
@@ -16,7 +16,7 @@ export default function Postings(props) {
                 <button onClick={() => props.handleDelete(posting.id)}>Delete</button>
               </>
             }
-          </React.Fragment>
+          </div>
         ))
       }
       <br />
