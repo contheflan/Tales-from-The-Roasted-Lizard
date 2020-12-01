@@ -6,12 +6,16 @@ import Login from "./screens/Login/Login";
 import Register from "./screens/Register/Register";
 import Postings from "./screens/Postings/Postings";
 
+// import { getAllComments } from '../services/comments'
+import { destroyPosting, getAllPostings, postPosting, putPosting } from "../src/services/postings"
+
 import { useState, useEffect } from 'react';
 
 import Layout from './layouts/Layout';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
+  const [postings, setPostings] = useState([]);
   const history = useHistory()
 
   useEffect(() => {
@@ -23,6 +27,13 @@ function App() {
       }
     }
     handleVerify();
+
+    const fetchPostings = async () => {
+      const postingData = await getAllPostings();
+      setPostings(postingData);
+    }
+
+    fetchPostings();
   }, [])
 
   const handleLogin = async (loginData) => {
@@ -43,6 +54,7 @@ function App() {
     removeToken();
     history.push('/');
   }
+
   return (
     <div className="App">
       <Layout
@@ -62,7 +74,7 @@ function App() {
         <Register />
       </Route>
       <Route exact path="/Postings">
-        <Postings />
+        <Postings postings={postings}/>
       </Route>
       <Route exact path="/EditPostings">
       </Route>

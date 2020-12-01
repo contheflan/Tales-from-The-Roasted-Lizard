@@ -9,13 +9,13 @@ export default function Postings(props) {
         props.postings.map(posting => (
           <div key={posting.id}>
             <Link to={`/postings/${posting.id}`}><p>{posting.title}</p></Link>
-            {
+            {/* {
               posting.user_id === props.currentUser?.id &&
               <>
-                <Link to={`/postings/${posting.id}/edit`}><button>Edit</button></Link>
+                <Link to={`/postings/${posting.id}/edit`}><button>Delete</button></Link>
                 <button onClick={() => props.handleDelete(posting.id)}>Delete</button>
               </>
-            }
+            } */}
           </div>
         ))
       }
