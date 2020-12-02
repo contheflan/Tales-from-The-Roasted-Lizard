@@ -1,14 +1,15 @@
 import React from 'react';
+import "./Postings.css";
 import { Link } from 'react-router-dom';
 
 export default function Postings(props) {
   return (
-    <div>
-      <h2>Here Thar Be Postings</h2>
+    <div className="postings-container" >
+      <h2>Here There Be Postings</h2>
       {
         props.postings.map(posting => (
-          <div key={posting.id}>
-            <Link to={`/postings/${posting.id}`}><p>{posting.title}</p></Link>
+          <div className="posting" key={posting.id}>
+            <Link to={`/Postings/${posting.id}`}><p className="posting-title">{posting.title}</p><img className="posting-img" src={posting.img_url}/></Link>
             {/* {
               posting.user_id === props.currentUser?.id &&
               <>
@@ -20,7 +21,7 @@ export default function Postings(props) {
         ))
       }
       <br />
-      <Link to='/postings/new'><button>Create</button></Link>
+      {/* <Link to='/postings/new'><button>Create</button></Link> */}
     </div>
   )
 }

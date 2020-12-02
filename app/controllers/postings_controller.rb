@@ -12,7 +12,7 @@ class PostingsController < ApplicationController
 
   # GET /postings/1
   def show
-    render json: @posting
+    render json: @posting, include: :comments, status: :ok
   end
 
   # POST /postings

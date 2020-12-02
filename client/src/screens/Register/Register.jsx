@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 export default function Register(props) {
   const [formData, setFormData] = useState({
     username: "",
+    img_url: "",
     email: "",
-    password: "",
-    img_url: ""
+    password: ""
   })
 
   const handleChange = (e) => {
@@ -35,7 +35,7 @@ export default function Register(props) {
         <input
           type='text'
           name='img_url'
-          value={formData.password}
+          value={formData.img_url}
           onChange={handleChange}
         />
       </label>

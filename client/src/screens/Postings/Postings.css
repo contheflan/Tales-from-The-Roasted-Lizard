@@ -1,0 +1,10 @@
+.postings-container {
+  background-image: url("../../assets/images/christmastavern.gif");
+  color: white;
+}
+
+.posting {
+  height: 90px;
+  max-width: 500px;
+  margin: 0 auto;
+}

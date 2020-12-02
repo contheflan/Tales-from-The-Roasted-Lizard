@@ -1,17 +1,15 @@
-import React from "react";
+import { useState, useEffect } from 'react';
 import { Route, useHistory } from 'react-router-dom';
 import "./App.css";
+import Layout from './layouts/Layout';
 import Intro from "./screens/Intro/Intro";
 import Login from "./screens/Login/Login";
 import Register from "./screens/Register/Register";
 import Postings from "./screens/Postings/Postings";
+import PostingDetails from "./screens/PostingDetails/PostingDetails";
 
 // import { getAllComments } from '../services/comments'
 import { destroyPosting, getAllPostings, postPosting, putPosting } from "../src/services/postings"
-
-import { useState, useEffect } from 'react';
-
-import Layout from './layouts/Layout';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -32,20 +30,21 @@ function App() {
       const postingData = await getAllPostings();
       setPostings(postingData);
     }
-
     fetchPostings();
+
+    
   }, [])
 
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    history.push('/postings');
+    history.push('/Postings');
   }
 
   const handleRegister = async (registerData) => {
     const userData = await registerUser(registerData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/Login');
   }
 
   const handleLogout = () => {
@@ -76,9 +75,10 @@ function App() {
       <Route exact path="/Postings">
         <Postings postings={postings}/>
       </Route>
-      <Route exact path="/EditPostings">
+      <Route exact path="/Postings/:id">
+        <PostingDetails postings={postings}/>
       </Route>
-      <Route exact path="/PostingDetails">
+      <Route exact path="/EditPostings">
       </Route>
       <Route exact path="/CreateComment">
       </Route>
