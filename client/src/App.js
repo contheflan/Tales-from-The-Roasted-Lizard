@@ -13,8 +13,9 @@ import CreateComment from "./screens/CreateComment/CreateComment";
 
 // import { getAllComments } from '../services/comments'
 import { destroyPosting, getAllPostings, postPosting, putPosting } from "../src/services/postings"
-import { destroyComment, getAllComments, postComment, putComment } from "../src/services/postings"
+import { destroyComment, getAllComments, postComment, putComment } from "../src/services/comments"
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
+
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [postings, setPostings] = useState([]);
@@ -93,10 +94,10 @@ function App() {
         <Register />
       </Route>
       <Route exact path="/Postings">
-        <Postings postings={postings}/>
+        <Postings postings={postings} handlePostDelete={handlePostDelete}/>
       </Route>
       <Route exact path="/Postings/:id">
-        <PostingDetails postings={postings} />
+        <PostingDetails postings={postings} handlePostDelete={handlePostDelete}/>
       </Route>
       <Route exact path="/CreatePosting">
         <CreatePosting handlePostCreate={handlePostCreate}/>

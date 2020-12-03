@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import "./CreateComment.css"
 function CreateComment(props) {
   const [formData, setFormData] = useState({
-    name: "",
-    img_url: "",
     content: "",
+    img_url: "",
   })
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -17,28 +16,21 @@ function CreateComment(props) {
     <div>
       <form onSubmit={(e) => {
         e.preventDefault()
-        props.handleCreate(formData)
+        props.handleCommentCreate(formData)
       }}>
         <h3>Add Yer Comment</h3>
-        <label htmlFor='title'>Name</label>
-        <input
-          type='text'
-          name='title'
-          value={formData.title}
-          onChange={handleChange}
-        />
-        <label htmlFor='img_url'>Image URL</label>
-        <input
-          type='text'
-          name='img_url'
-          value={formData.image_url}
-          onChange={handleChange}
-        />
-        <label htmlFor='content'>Content</label>
+        <label htmlFor='content'>Comment</label>
         <input
           type='text'
           name='content'
-          value={formData.description}
+          value={formData.content}
+          onChange={handleChange}
+        />
+        <label htmlFor='img_url'>Add an Image</label>
+        <input
+          type='text'
+          name='img_url'
+          value={formData.img_url}
           onChange={handleChange}
         />
         <button>Submit</button>

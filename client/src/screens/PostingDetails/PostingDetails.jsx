@@ -37,20 +37,21 @@ export default function PostingDetails(props) {
       <Layout/>
       <div>
       <h3>{currentPost?.title}</h3>
-      <p>{currentPost?.content}</p>
-    <div className="comments-container">
-      {
-        currentPost.comments?.map(comment => (
-          <div key={comment.id}>
-            <p>{comment.user.username}#{comment.user_id} said</p>
-            <p>{comment.content}</p>
-          </div>
-        ))
-      }
-        <Link to="/CreateComment">
-        <button>Comment</button>
-        </Link>
-    </div>
+        <p>{currentPost?.content}</p>
+        <button onClick={props.handlePostDelete}>Delete</button>
+      <div className="comments-container">
+        {
+          currentPost.comments?.map(comment => (
+            <div key={comment.id}>
+              <p>{comment.user.username}#{comment.user_id} said</p>
+              <p>{comment.content}</p>
+            </div>
+          ))
+          }
+          <Link to="/CreateComment">
+          <button>Comment</button>
+          </Link>
+      </div>
     </div>
   </>
   )

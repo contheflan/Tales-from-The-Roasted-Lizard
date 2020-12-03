@@ -19,7 +19,7 @@ function CreatePosting(props) {
         e.preventDefault()
         props.handlePostCreate(formData)
       }}>
-        <h3>Add Yer Posting</h3>
+        <h3>Post Yer Posting</h3>
         <label htmlFor='title'>Name</label>
         <input
           type='text'
