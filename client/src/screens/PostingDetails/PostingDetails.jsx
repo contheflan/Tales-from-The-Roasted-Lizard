@@ -5,7 +5,6 @@ import { getOnePosting } from '../../services/postings'
 // import { addFlavor } from '../services/flavors';
 export default function PostingDetails(props) {
   const [currentPost, setCurrentPost] = useState({})
-  // const [comment, setComment] = useState([])
   const { id } = useParams();
 
   useEffect(() => {
@@ -14,12 +13,6 @@ export default function PostingDetails(props) {
       setCurrentPost(post);
     }
     fetchPostingDetail();
-
-    // const fetchComment = async () => {
-    //   const comment = await getOnePosting(id);
-    //   setComment(postingDetail.comment);
-    // }
-    // fetchComment();
   }, [id])
 
   // const handleSubmit = async (e) => {
@@ -42,7 +35,7 @@ export default function PostingDetails(props) {
   return (
     <>
       <Layout/>
-    <div>
+      <div>
       <h3>{currentPost?.title}</h3>
       <p>{currentPost?.content}</p>
     <div className="comments-container">

@@ -6,6 +6,9 @@ export default function Postings(props) {
   return (
     <div className="postings-container" >
       <h2>Here There Be Postings</h2>
+      <Link to="/CreatePosting">
+        <button>Add Posting</button>
+        </Link>
       {
         props.postings.map(posting => (
           <div className="posting" key={posting.id}>

@@ -6,14 +6,19 @@ import Intro from "./screens/Intro/Intro";
 import Login from "./screens/Login/Login";
 import Register from "./screens/Register/Register";
 import Postings from "./screens/Postings/Postings";
+import CreatePosting from "./screens/CreatePosting/CreatePosting";
 import PostingDetails from "./screens/PostingDetails/PostingDetails";
+import EditPostings from "./screens/EditPosting/EditPosting";
+import CreateComment from "./screens/CreateComment/CreateComment";
 
 // import { getAllComments } from '../services/comments'
 import { destroyPosting, getAllPostings, postPosting, putPosting } from "../src/services/postings"
+import { destroyComment, getAllComments, postComment, putComment } from "../src/services/postings"
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [postings, setPostings] = useState([]);
+  const [comments, setComments] = useState([]);
   const history = useHistory()
 
   useEffect(() => {
@@ -53,6 +58,24 @@ function App() {
     history.push('/');
   }
 
+  const handlePostCreate = async (postingData) => {
+    const newPosting = await postPosting(postingData);
+    setPostings(prevState => [...prevState, newPosting]);
+    history.push('/Postings');
+  }
+
+  const handleCommentCreate = async (commentData) => {
+    const newComment = await postComment(commentData);
+    setComments(prevState => [...prevState, newComment]);
+    history.push(`/Postings/${postings.id}`);
+    // is this line above right? ask shay
+  }
+
+  const handlePostDelete = async (id) => {
+    await destroyPosting(id);
+    setPostings(prevState => prevState.filter(posting => posting.id !== id))
+  }
+
   return (
     <div className="App">
       <div>
@@ -75,9 +98,14 @@ function App() {
       <Route exact path="/Postings/:id">
         <PostingDetails postings={postings} />
       </Route>
+      <Route exact path="/CreatePosting">
+        <CreatePosting handlePostCreate={handlePostCreate}/>
+      </Route>
       <Route exact path="/EditPostings">
+        <EditPostings handlePostDelete={handlePostDelete} />
       </Route>
       <Route exact path="/CreateComment">
+        <CreateComment handleCommentCreate={handleCommentCreate} />
       </Route>
       <Route exact path="/EditComment">
       </Route>
