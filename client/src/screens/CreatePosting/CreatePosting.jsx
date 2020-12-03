@@ -20,21 +20,21 @@ function CreatePosting(props) {
         props.handlePostCreate(formData)
       }}>
         <h3>Post Yer Posting</h3>
-        <label htmlFor='title'>Name</label>
+        <label htmlFor='title'>Title Yer Posting</label>
         <input
           type='text'
           name='title'
           value={formData.title}
           onChange={handleChange}
         />
-        <label htmlFor='img_url'>Image URL</label>
+        <label htmlFor='img_url'>Attach Yer Image</label>
         <input
           type='text'
           name='img_url'
           value={formData.image_url}
           onChange={handleChange}
         />
-        <label htmlFor='content'>Content</label>
+        <label htmlFor='content'>What's Yer Content?</label>
         <input
           type='text'
           name='content'

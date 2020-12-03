@@ -1,0 +1,25 @@
+.posting-container {
+  background-image: url("../../assets/textures/tavernwall.jpg");
+}
+
+.posting-detail {
+  background-image: url("../../assets/textures/redwoodsmall.jpg");
+  max-width: 95%;
+  margin: 10px auto;
+}
+
+h3 {
+  background-image: url("../../assets/textures/medwood.jpg");
+}
+
+.posting-content {
+  background-image: url("../../assets/textures/redwoodsmall.jpg")
+}
+
+.comments-container {
+  background-image: url("../../assets/textures/oldlightwood.jpg");
+}
+
+.comments {
+  background-image: url("../../assets/textures/medwood.jpg");
+}

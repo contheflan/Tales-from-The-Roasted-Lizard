@@ -18,33 +18,38 @@ export default function Login(props) {
   }
 
   return (
-    <div>
+    <div className="login-container">
     <img className= "login-ham" src={ham} alt="yum!"></img>
     <form onSubmit={(e) => {
       e.preventDefault();
       props.handleLogin(formData);
     }}>
-      <h3>Username</h3>
-      <label>Username:
-        <input
-          type='text'
-          name='username'
-          value={formData.username}
-          onChange={handleChange}
-          />
-      </label>
-      <br />
-      <label>Password:
-        <input
-          type='password'
-          name='password'
-          value={formData.password}
-          onChange={handleChange}
-          />
-      </label>
-      <br />
-      <Link to='/Register'>Register</Link>
-      <button>Submit</button>
+      <h2>Sign Into the Registrar or Add Yer Name to the List</h2>
+        <div className="login-form">
+          <label>Username:
+            <input
+              type='text'
+              name='username'
+              value={formData.username}
+              onChange={handleChange}
+              />
+          </label>
+          <br />
+          <label>Password:
+            <input
+              type='password'
+              name='password'
+              value={formData.password}
+              onChange={handleChange}
+              />
+          </label>
+          <br />
+          <Link to='/Register'>Register</Link>
+          <button>Submit</button>
+        </div>
+        <div className="leave">
+        <Link to='/'>Leave the Tavern</Link>
+        </div>
     </form>
     </div>
   )

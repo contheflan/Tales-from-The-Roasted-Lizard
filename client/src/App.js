@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
-import { Route, useHistory } from 'react-router-dom';
+import { Route, useHistory, Redirect } from 'react-router-dom';
 import "./App.css";
-import Layout from './layouts/Layout';
 import Intro from "./screens/Intro/Intro";
 import Login from "./screens/Login/Login";
 import Register from "./screens/Register/Register";
+import AccountDetails from "./screens/AccountDetails/AccountDetails";
 import Postings from "./screens/Postings/Postings";
 import CreatePosting from "./screens/CreatePosting/CreatePosting";
 import PostingDetails from "./screens/PostingDetails/PostingDetails";
-import EditPostings from "./screens/EditPosting/EditPosting";
+import EditPosting from "./screens/EditPosting/EditPosting";
 import CreateComment from "./screens/CreateComment/CreateComment";
 
 // import { getAllComments } from '../services/comments'
@@ -17,6 +17,7 @@ import { destroyComment, getAllComments, postComment, putComment } from "../src/
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 
 function App() {
+  const [toggle, setToggle] = useState(true)
   const [currentUser, setCurrentUser] = useState(null);
   const [postings, setPostings] = useState([]);
   const [comments, setComments] = useState([]);
@@ -38,7 +39,7 @@ function App() {
     }
     fetchPostings();
 
-  }, [])
+  }, [toggle])
 
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
@@ -65,16 +66,25 @@ function App() {
     history.push('/Postings');
   }
 
+  const handlePostDelete = async (id) => {
+    await destroyPosting(id);
+    setPostings(prevState => prevState.filter(posting => posting.id !== id));
+    setToggle(prevState => !prevState)
+    history.push('/Postings');
+  }
+
+  const handlePostUpdate = async (postingData) => {
+    const newPosting = await postPosting(postingData);
+    setPostings(prevState => [...prevState, newPosting]);
+    history.push(`/Postings/${newPosting.id}`);
+  }
+
   const handleCommentCreate = async (commentData) => {
     const newComment = await postComment(commentData);
     setComments(prevState => [...prevState, newComment]);
-    history.push(`/Postings/${postings.id}`);
+    setToggle(prevState => !prevState)
+    history.push(`/Postings/${newComment.id}`);
     // is this line above right? ask shay
-  }
-
-  const handlePostDelete = async (id) => {
-    await destroyPosting(id);
-    setPostings(prevState => prevState.filter(posting => posting.id !== id))
   }
 
   return (
@@ -83,36 +93,60 @@ function App() {
       <Route exact path="/">
         <Intro />
       </Route>
+        
       <Route exact path="/Login">
-        <Login handleLogin={handleLogin}/>
+        <Login 
+          handleLogin={handleLogin} />
       </Route>
+        
       <Route exact path="/Register">
-        <Register handleRegister={handleRegister}/>
+        <Register 
+          handleRegister={handleRegister} />
       </Route>
-        <Layout handleLogout={handleLogout}>
+        
       <Route exact path="/AccountDetails">
-        <Register />
+        <AccountDetails 
+          handleLogout={handleLogout} />
       </Route>
+        
       <Route exact path="/Postings">
-        <Postings postings={postings} handlePostDelete={handlePostDelete}/>
+        <Postings
+          postings={postings}
+          handleLogout={handleLogout}
+          handlePostDelete={handlePostDelete} />
       </Route>
+        
       <Route exact path="/Postings/:id">
-        <PostingDetails postings={postings} handlePostDelete={handlePostDelete}/>
+        <PostingDetails
+          postings={postings}
+          handleLogout={handleLogout}
+          handlePostDelete={handlePostDelete} />
       </Route>
+        
       <Route exact path="/CreatePosting">
-        <CreatePosting handlePostCreate={handlePostCreate}/>
+          <CreatePosting
+          postings={postings}
+          handleLogout={handleLogout}
+          handlePostCreate={handlePostCreate} />
       </Route>
-      <Route exact path="/EditPostings">
-        <EditPostings handlePostDelete={handlePostDelete} />
+        
+      <Route exact path="/Postings/:id/Edit">
+        <EditPosting
+          postings={postings}
+          handlePostUpdate={handlePostUpdate}
+          handlePostDelete={handlePostDelete} />
       </Route>
+
       <Route exact path="/CreateComment">
-        <CreateComment handleCommentCreate={handleCommentCreate} />
+        <CreateComment
+          handleCommentCreate={handleCommentCreate} />
       </Route>
+      
       <Route exact path="/EditComment">
+        
       </Route>
-        </Layout>
-    </div>
       </div>
+    </div>
   );
 }
 

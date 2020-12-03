@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Layout from '../../layouts/Layout';
 import { getOnePosting } from '../../services/postings'
+import "./PostingDetails.css"
 // import { addFlavor } from '../services/flavors';
+
 export default function PostingDetails(props) {
   const [currentPost, setCurrentPost] = useState({})
   const { id } = useParams();
@@ -33,26 +35,32 @@ export default function PostingDetails(props) {
   // }
 
   return (
-    <>
+    <div className="posting-container">
       <Layout/>
-      <div>
+    <div className="posting-detail">
       <h3>{currentPost?.title}</h3>
-        <p>{currentPost?.content}</p>
-        <button onClick={props.handlePostDelete}>Delete</button>
+      <img src={currentPost?.img_url}></img>
+      <p>{currentPost.user?.username} posted</p>
+      <p className="posting-content">{currentPost?.content}</p>
+      <button onClick={() => props.handlePostDelete(id) }>Delete</button>
+      <Link to={`/Postings/${id}/Edit`}>
+      <button>Edit</button>
+      </Link>
       <div className="comments-container">
-        {
-          currentPost.comments?.map(comment => (
-            <div key={comment.id}>
-              <p>{comment.user.username}#{comment.user_id} said</p>
-              <p>{comment.content}</p>
-            </div>
-          ))
-          }
-          <Link to="/CreateComment">
-          <button>Comment</button>
-          </Link>
+        <p>COMMENTS</p>
+      {
+        currentPost.comments?.map(comment => (
+          <div key={comment.id} className="comments">
+            <p>{comment.user.username}#{comment.user_id} said</p>
+            <p>{comment.content}</p>
+          </div>
+        ))
+        }
+        <Link to="/CreateComment">
+        <button>Comment</button>
+        </Link>
       </div>
     </div>
-  </>
+  </div>
   )
 }
