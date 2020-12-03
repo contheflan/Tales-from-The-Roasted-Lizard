@@ -32,7 +32,6 @@ function App() {
     }
     fetchPostings();
 
-    
   }, [])
 
   const handleLogin = async (loginData) => {
@@ -56,10 +55,7 @@ function App() {
 
   return (
     <div className="App">
-      <Layout
-      currentUser={currentUser}
-      handleLogout={handleLogout}
-    ></Layout>
+      <div>
       <Route exact path="/">
         <Intro />
       </Route>
@@ -69,6 +65,7 @@ function App() {
       <Route exact path="/Register">
         <Register handleRegister={handleRegister}/>
       </Route>
+        <Layout handleLogout={handleLogout}>
       <Route exact path="/AccountDetails">
         <Register />
       </Route>
@@ -76,7 +73,7 @@ function App() {
         <Postings postings={postings}/>
       </Route>
       <Route exact path="/Postings/:id">
-        <PostingDetails postings={postings}/>
+        <PostingDetails postings={postings} />
       </Route>
       <Route exact path="/EditPostings">
       </Route>
@@ -84,7 +81,9 @@ function App() {
       </Route>
       <Route exact path="/EditComment">
       </Route>
+        </Layout>
     </div>
+      </div>
   );
 }
 

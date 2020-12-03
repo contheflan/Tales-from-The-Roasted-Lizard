@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import Layout from '../../layouts/Layout';
 import { getOnePosting } from '../../services/postings'
 // import { addFlavor } from '../services/flavors';
-
 export default function PostingDetails(props) {
   const [currentPost, setCurrentPost] = useState({})
   // const [comment, setComment] = useState([])
@@ -40,14 +40,16 @@ export default function PostingDetails(props) {
   // }
 
   return (
+    <>
+      <Layout/>
     <div>
       <h3>{currentPost?.title}</h3>
       <p>{currentPost?.content}</p>
     <div className="comments-container">
       {
-      currentPost.comments?.map(comment => (
-        <div key={comment.id}>
-            <p>{} said</p>
+        currentPost.comments?.map(comment => (
+          <div key={comment.id}>
+            <p>{comment.user.username}#{comment.user_id} said</p>
             <p>{comment.content}</p>
           </div>
         ))
@@ -57,5 +59,6 @@ export default function PostingDetails(props) {
         </Link>
     </div>
     </div>
+  </>
   )
 }

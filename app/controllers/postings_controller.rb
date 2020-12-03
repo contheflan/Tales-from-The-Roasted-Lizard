@@ -12,11 +12,12 @@ class PostingsController < ApplicationController
 
   # GET /postings/1
   def show
-    render json: @posting, include: :comments, status: :ok
+    render json: @posting, :include => {:comments => {:include => :user}}, status: :ok
   end
 
   # POST /postings
   def create
+    
     @posting = Posting.new(posting_params)
     @posting.user = @current_user
     if @posting.save
