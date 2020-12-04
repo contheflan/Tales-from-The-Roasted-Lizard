@@ -24,7 +24,7 @@ export default function Login(props) {
       e.preventDefault();
       props.handleLogin(formData);
     }}>
-      <h2>Sign Into the Registrar or Add Yer Name to the List</h2>
+      <h2 className="login-text">Sign into the Registrar or add yer name to the List</h2>
         <div className="login-form">
           <label>Username:
             <input
@@ -44,13 +44,27 @@ export default function Login(props) {
               />
           </label>
           <br />
-          <Link to='/Register'>Register</Link>
-          <button>Submit</button>
-        </div>
-        <div className="leave">
-        <Link to='/'>Leave the Tavern</Link>
+            <button className="login-button">
+            Submit
+            </button>
         </div>
     </form>
+      <div className="login-misc">
+        <div >
+        <Link to='/Register'>
+            <button className="register">
+            Register
+            </button>
+        </Link>
+        </div>
+        <div >
+        <Link to='/'>
+            <button className="leave">
+            Leave
+            </button>
+        </Link>
+        </div>
+      </div>
     </div>
   )
 }

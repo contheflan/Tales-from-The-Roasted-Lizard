@@ -8,6 +8,11 @@
   flex-wrap: wrap;
 }
 
+.christmas {
+  box-shadow: 0px 0px 5px 1px black;
+  min-width: 40vw;
+}
+
 .postings {
   background-image: url("../../assets/textures/medwood.jpg");
   height: 15vh;
@@ -18,14 +23,24 @@
   box-shadow: 0px 0px 5px 1px black;
   padding: 20px;
   margin-bottom: 60px;
-  max-width: 325px;
-  min-width: 325px;
-  min-height: 385px;
+  max-width: 300px;
+  min-width: 300px;
+  min-height: 350px;
   text-decoration: none;
   color: rgba(61, 38, 8, 0.885);
+  font-size: 20px;
 }
 
 .posting-img {
+  box-shadow: 0px 0px 5px 1px black;
   max-width: 30vw;
   max-height: 30vh;
+}
+
+.posting-button {
+  background-image: url("../../assets/textures/lightwood.jpg");
+  color: none;
+  margin: 2px auto;
+  font-family: 'Spectral', serif;
+  display:block;
 }

@@ -1,13 +1,16 @@
 .App {
   text-align: center;
-  /* background-color:rgb(0, 0, 0); */
   background-image: url(".././src/assets/textures/tavernwall.jpg");
   color: rgb(255, 255, 255);
-  /* height: 100%;
-  max-width: 80%;
-  margin: 10% auto; */
+  font-family: 'Spectral', serif;
 }
 
 body {
   background-image: url(".././src/assets/textures/tavernwall.jpg");
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family:
 }

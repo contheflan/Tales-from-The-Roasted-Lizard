@@ -8,6 +8,10 @@
   margin: 10px auto;
 }
 
+h2 {
+  color: rgb(230, 186, 77);
+}
+
 h3 {
   background-image: url("../../assets/textures/medwood.jpg");
 }
@@ -22,4 +26,7 @@ h3 {
 
 .comments {
   background-image: url("../../assets/textures/medwood.jpg");
+  max-width: 70%;
+  margin: 5px auto;
+  color: rgb(0, 0, 0);
 }

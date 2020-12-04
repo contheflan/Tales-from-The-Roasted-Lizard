@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import "./Register.css"
 export default function Register(props) {
   const [formData, setFormData] = useState({
     username: "",
@@ -17,6 +18,7 @@ export default function Register(props) {
   }
 
   return (
+    <div className="register-container">
     <form onSubmit={(e) => {
       e.preventDefault();
       props.handleRegister(formData);
@@ -28,7 +30,7 @@ export default function Register(props) {
           name='username'
           value={formData.username}
           onChange={handleChange}
-        />
+          />
       </label>
       <br />
       <label>User Image:
@@ -37,7 +39,7 @@ export default function Register(props) {
           name='img_url'
           value={formData.img_url}
           onChange={handleChange}
-        />
+          />
       </label>
       <br />
       <label>Email:
@@ -46,7 +48,7 @@ export default function Register(props) {
           name='email'
           value={formData.email}
           onChange={handleChange}
-        />
+          />
       </label>
       <br />
       <label>Password:
@@ -55,11 +57,12 @@ export default function Register(props) {
           name='password'
           value={formData.password}
           onChange={handleChange}
-        />
+          />
       </label>
       <br />
+      <button className="register-submit">Submit</button>
       <Link to='/Login'>Back to Login</Link>
-      <button>Submit</button>
     </form>
+  </div>
   )
 }

@@ -2,14 +2,15 @@ import React from 'react';
 import "./Postings.css";
 import { Link } from 'react-router-dom';
 import Layout from '../../layouts/Layout';
-
+import Christmas from '../../assets/images/christmastavern.gif'
 export default function Postings(props) {
   return (
     <div>
       <Layout />
-    <h2>Here There Be Postings</h2>
+      <h2>Here There Be Postings</h2>
+      <img className="christmas" src={Christmas}></img>
     <Link to="/CreatePosting">
-    <button>Add Posting</button>
+    <button className="posting-button">Add Posting</button>
     </Link>
     <div className="postings-container" >
     {
