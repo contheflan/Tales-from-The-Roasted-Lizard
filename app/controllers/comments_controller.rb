@@ -26,7 +26,7 @@ class CommentsController < ApplicationController
 
   def create
     @posting = Posting.find(params[:posting_id])
-    @comment = @posting.comments.create(comment_params)
+    @comment = @posting.comments.new(comment_params)
     if @comment.save
        render json: @comment, status: :created
         else

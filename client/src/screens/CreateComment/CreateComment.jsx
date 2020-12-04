@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import "./CreateComment.css"
+
 function CreateComment(props) {
+  const { id } = useParams();
   const [formData, setFormData] = useState({
     content: "",
     img_url: "",
@@ -12,11 +15,12 @@ function CreateComment(props) {
       [name]: value
     }))
   }
+  console.log(id)
   return (
     <div>
       <form onSubmit={(e) => {
         e.preventDefault()
-        props.handleCommentCreate(formData)
+        props.handleCommentCreate(formData, id)
       }}>
         <h3>Add Yer Comment</h3>
         <label htmlFor='content'>Comment</label>

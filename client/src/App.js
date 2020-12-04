@@ -79,11 +79,11 @@ function App() {
     history.push(`/Postings/${newPosting.id}`);
   }
 
-  const handleCommentCreate = async (commentData) => {
-    const newComment = await postComment(commentData);
+  const handleCommentCreate = async (commentData, posting_id) => {
+    const newComment = await postComment(commentData, posting_id);
     setComments(prevState => [...prevState, newComment]);
     setToggle(prevState => !prevState)
-    history.push(`/Postings/${newComment.id}`);
+    history.push(`/Postings/${posting_id}`);
     // is this line above right? ask shay
   }
 
@@ -117,7 +117,7 @@ function App() {
       </Route>
         
       <Route exact path="/Postings/:id">
-        <PostingDetails
+          <PostingDetails
           postings={postings}
           handleLogout={handleLogout}
           handlePostDelete={handlePostDelete} />
@@ -137,7 +137,7 @@ function App() {
           handlePostDelete={handlePostDelete} />
       </Route>
 
-      <Route exact path="/CreateComment">
+      <Route exact path="/Postings/:id/comments">
         <CreateComment
           handleCommentCreate={handleCommentCreate} />
       </Route>

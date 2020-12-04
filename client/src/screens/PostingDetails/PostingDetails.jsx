@@ -56,7 +56,7 @@ export default function PostingDetails(props) {
           </div>
         ))
         }
-        <Link to="/CreateComment">
+        <Link to={`${id}/comments`}>
         <button>Comment</button>
         </Link>
       </div>
