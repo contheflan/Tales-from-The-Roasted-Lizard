@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Layout from '../../layouts/Layout';
 import "./CreatePosting.css"
 function CreatePosting(props) {
   const [formData, setFormData] = useState({
@@ -14,12 +15,14 @@ function CreatePosting(props) {
     }))
   }
   return (
-    <div>
-      <form onSubmit={(e) => {
+    <>
+      <Layout />
+    <div className="create-container">
+      <form className="create-form" onSubmit={(e) => {
         e.preventDefault()
         props.handlePostCreate(formData)
       }}>
-        <h3>Post Yer Posting</h3>
+        <h3 className="create-title">Post Yer Posting</h3>
         <label htmlFor='title'>Title Yer Posting</label>
         <input
           type='text'
@@ -34,7 +37,7 @@ function CreatePosting(props) {
           value={formData.image_url}
           onChange={handleChange}
         />
-        <label htmlFor='content'>What's Yer Content?</label>
+        <label className="create-content" htmlFor='content'>What's Yer Content?</label>
         <input
           type='text'
           name='content'
@@ -43,7 +46,8 @@ function CreatePosting(props) {
         />
         <button>Submit</button>
       </form>
-    </div>
+      </div>
+    </>
   );
 }
 export default CreatePosting;

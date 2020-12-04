@@ -4,7 +4,7 @@ import "./Header.css"
 export default function Header(props) {
   const { currentUser, handleLogout } = props;
   return (
-    <div>
+    <header>
       <Link to="/Postings">
         <h1>
           The Roasted Lizard Inn
@@ -23,10 +23,10 @@ export default function Header(props) {
       {
         currentUser &&
         <>
-          <Link to="/Postings">Back to Postings</Link>
+          <Link className="back" to="/Postings">Back to Postings</Link>
           <Link to='/AccountDetails'>My Account</Link>
         </>
       }
-    </div>
+    </header>
   )
 }

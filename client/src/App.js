@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Route, useHistory, Redirect } from 'react-router-dom';
+import { Route, useHistory } from 'react-router-dom';
 import "./App.css";
 import Intro from "./screens/Intro/Intro";
 import Login from "./screens/Login/Login";
@@ -10,10 +10,8 @@ import CreatePosting from "./screens/CreatePosting/CreatePosting";
 import PostingDetails from "./screens/PostingDetails/PostingDetails";
 import EditPosting from "./screens/EditPosting/EditPosting";
 import CreateComment from "./screens/CreateComment/CreateComment";
-
-// import { getAllComments } from '../services/comments'
 import { destroyPosting, getAllPostings, postPosting, putPosting } from "../src/services/postings"
-import { destroyComment, getAllComments, postComment, putComment } from "../src/services/comments"
+import { postComment } from "../src/services/comments"
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 
 function App() {

@@ -30,3 +30,42 @@ h3 {
   margin: 5px auto;
   color: rgb(0, 0, 0);
 }
+
+@media screen and (max-width: 1024px) {
+  .login-container {
+    width: 800px;
+    height: 1000px;
+    margin-top: 100px;
+  }
+
+  .login-ham {
+    width: 800px;
+  }
+  
+  .login-text {
+    font-size: 50px;
+    width: 700px;
+    margin: 5px auto;
+  }
+  
+  .login-form {
+    font-size: 50px;
+    width: 500px;
+    margin: 0px auto;
+  }
+
+  input {
+    font-size: 50px;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+  }
+
+  .login-button, .register, .leave {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  
+}

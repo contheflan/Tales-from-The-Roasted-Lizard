@@ -1,0 +1,23 @@
+.create-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+
+}
+
+.create-title {
+  color: black;
+}
+
+.create-form {
+  height: 300px;
+}
+
+.create-content {
+  width: 500px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  margin: 10px auto;
+}

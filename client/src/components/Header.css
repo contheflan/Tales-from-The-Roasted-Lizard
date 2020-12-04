@@ -1,4 +1,12 @@
-h1 {
-  text-decoration: none;
+header {
+  font-size: 50px;
 }
 
+.back {
+  background-image: url("../assets/textures/oldlightwood.jpg");
+  color: none;
+  margin: 2px auto;
+  font-family: 'Spectral', serif;
+  display:block;
+  font-size: 30px;
+}
