@@ -161,8 +161,30 @@ https://drive.google.com/file/d/1wkrSFbzqiZcz7-2maaHpdKjUKAPGOcbF/view?usp=shari
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+```
+<div>
+      <Layout />
+      <h2>Here There Be Postings</h2>
+      <img className="christmas" src={Christmas}></img>
+    <Link to="/CreatePosting">
+    <button className="posting-button">Add Posting</button>
+    </Link>
+    <div className="postings-container" >
+    {
+      props.postings.map(posting => (
+        <div className="postings" key={posting.id}>
+          <Link to={`/Postings/${posting.id}`}>
+            <p className="posting-title">{posting.title}</p>
+            <img className="posting-img" src={posting.img_url} />
+          </Link>
+        </div>
+        ))
+      }
+      <br />
+      </div>
+      </div>
+ ```
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+> Had a lot of trouble getting the backend to cooperate with the front end update. In one instance it turns out whenever I thought I was updating a post it was actually creating a new post with the previous edits to the new post! (prevState strikes again!)
