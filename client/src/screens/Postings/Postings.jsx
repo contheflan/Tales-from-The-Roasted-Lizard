@@ -19,15 +19,7 @@ export default function Postings(props) {
           <Link to={`/Postings/${posting.id}`}>
             <p className="posting-title">{posting.title}</p>
             <img className="posting-img" src={posting.img_url} />
-            <p className="posting-blurb">{posting.content}</p>
           </Link>
-        {/* {
-          posting.user_id === props.currentUser?.id &&
-          <>
-          <Link to={`/postings/${posting.id}/edit`}><button>Delete</button></Link>
-          <button onClick={() => props.handleDelete(posting.id)}>Delete</button>
-          </>
-        } */}
         </div>
         ))
       }

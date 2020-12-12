@@ -71,10 +71,9 @@ function App() {
     history.push('/Postings');
   }
 
-  const handlePostUpdate = async (postingData) => {
-    const newPosting = await postPosting(postingData);
-    setPostings(prevState => [...prevState, newPosting]);
-    history.push(`/Postings/${newPosting.id}`);
+  const handlePostUpdate = async (id, postingData) => {
+    const updatePosting = await putPosting(id, postingData);
+    history.push(`/Postings/${updatePosting.id}`);
   }
 
   const handleCommentCreate = async (commentData, posting_id) => {
@@ -82,7 +81,6 @@ function App() {
     setComments(prevState => [...prevState, newComment]);
     setToggle(prevState => !prevState)
     history.push(`/Postings/${posting_id}`);
-    // is this line above right? ask shay
   }
 
   return (

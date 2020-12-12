@@ -31,7 +31,7 @@ function EditPosting(props) {
     <div>
       <form onSubmit={(e) => {
         e.preventDefault()
-        props.handlePostUpdate(formData)
+        props.handlePostUpdate(Number(id), formData)
       }}>
         <h3>Update Yer Posting</h3>
         <label htmlFor='title'>Update Yer Title?</label>
